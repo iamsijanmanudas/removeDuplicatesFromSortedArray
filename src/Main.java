@@ -13,15 +13,14 @@ public class Main {
         System.out.println(removeDuplicates(nums2));
     }
     public static int removeDuplicates(int[] nums) {
-        int uniqueNumber = 0;
+        int uniqueNumber ;
         int [] uniqueNums;
 
         HashMap <Integer , Integer> number = new HashMap<> ();
 
-        for (int i = 0 ; i < nums.length ; i++ )
-        {
+        for (int num : nums) {
             // put the value from array and the frequency of that key in the hashmap
-            number.put(nums[i], number.getOrDefault(nums[i], 0)+1 );
+            number.put(num, number.getOrDefault(num, 0) + 1);
         }
         uniqueNumber = number.size();
         uniqueNums = new int [number.size()];
